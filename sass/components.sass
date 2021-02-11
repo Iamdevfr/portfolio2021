@@ -1,0 +1,129 @@
+
+//Title transparent
+
+.titre-hero
+  font-weight: 900
+  font-size: 12vw
+  line-height: 1
+  -webkit-text-stroke: 2px #EA5548
+  opacity: 0.9
+  color: transparent
+  margin-left: 100px
+  background-clip: text
+  -webkit-background-clip: text
+  background-image: linear-gradient(to bottom, transparent 50%, #EA5548 50%)
+  transition: background-position ease-out 0.4s
+  background-size: 1% 200%
+
+  &:hover
+    background-position: 0 -100%
+
+//Title full
+
+.titre-animate
+  font-weight: 900
+  font-size: 10vw
+  line-height: 1
+  color:  #EA5548
+  overflow: hidden
+//container title 
+
+.titleContainer
+
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+//Navigation
+
+/********************************************************************************************************************************
+ * NAVIGATION
+ ********************************************************************************************************************************
+
+.nav-pane
+  transition: 250ms
+  position: fixed
+  transform: translateX(-350px)
+  top: 0
+  height: 100vh
+  width: 348px
+  background: #EA5548
+  border-right: 2px solid #e94d3f
+  display: flex
+  flex-direction: column
+  box-shadow: 0px 3px 10px rgba(33, 33, 33, 0.5)
+  z-index: 99
+
+  h1
+    margin: 0
+    text-align: center
+    color: #F1F1F1
+    text-transform: uppercase
+    font-size: 1.5rem
+
+  &.open
+    transform: translateX(0)
+    transition: 250ms
+
+@media screen and (max-width: 620px)
+  .nav-pane
+    width: 298px
+    transform: translateX(-300px)
+
+.toggle-nav
+  position: absolute
+  top: 25px
+  right: 25px
+  cursor: pointer
+  color: #EA5548
+  z-index: 99
+
+  &.open span
+    &.m, &.n, &.u
+      opacity: 1
+
+  span
+    &.m, &.n, &.u
+      font-size: 3.05rem
+      opacity: 0
+      transition: 250ms
+      letter-spacing: 2px
+
+    &.e
+      display: inline-block
+      height: 36px
+      width: 51px
+
+      &.btn-close span.bar
+        &:nth-child(1)
+          transition: 250ms
+          transform: rotate(45deg)
+          top: 15px
+
+        &:nth-child(2)
+          opacity: 0
+          transition: 250ms
+
+        &:nth-child(3)
+          transition: 250ms
+          transform: rotate(-45deg)
+          bottom: 12px
+
+      span.bar
+        transition: 250ms
+        position: relative
+        display: block
+        background: #EA5548
+        border-radius: 5px
+        border-bottom: 5px solid #EA5548
+        width: 45px
+        height: 3px
+        margin-top: 4px
+
+        &:nth-child(2)
+          margin: 8px 0
+
+  &:hover span
+    &.m, &.n, &.u
+      opacity: 1
+      transition: 250ms
