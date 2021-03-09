@@ -1,67 +1,59 @@
+gsap.registerPlugin(ScrollTrigger);
 
+ function animTitle(){
+    document.body.style.overflow = 'auto';
+    
+    gsap.utils.toArray('section').forEach(
+        (section, index) => {
+        if(section.className === "contact-section" 
+        || section.className === "works-section" 
+        || section.className ==="skills-section"){
 
-//////////////////////////////////////////////////////////////
-/////////////////////////// MENU TOGGLE //////////////////////
-/////////////////////////////////////////////////////////////
- function nav() {
+          const w = section.querySelector('.titleContainer');
+          const [x, xEnd] = index % 2 ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
     
-    (function($) {
-
-        $(document).ready(function(){
-        $('.toggle-nav').on('click', function() {
-            toggleNavigation($(this), $('.nav-pane'));
-            changeLetters($(this));
-        });
-    
-        function toggleNavigation(btn, nav) {
-            btn.toggleClass('open');
-            nav.toggleClass('open');
-        }
-    
-        function changeLetters(btn) {
-            var m = $('.toggle-nav span.m');
-            var e = $('.toggle-nav span.e');
-            var n = $('.toggle-nav span.n');
-            var u = $('.toggle-nav span.u');
-    
-            e.toggleClass('btn-close');
-    
-            if(btn.hasClass('open'))
-            {
-            m.text("E");
-            n.text("I");
-            u.text("T");
-            }
-            else
-            {
-            m.text("M");
-            n.text("N");
-            u.text("U");
-            }
-        }
-        });
-    
-    })(jQuery);
+          gsap.fromTo(w, { x }, {
+              x: xEnd,
+              scrollTrigger: {
+                  trigger: "titre-animate",
+                  scrub: 01 } 
+              });
+              }
+          }
+      )     
 }
 
- function scriptAnim(){
 
-    gsap.registerPlugin(ScrollTrigger);
+function animContactText(){
 
+    gsap.from(".contact-section__container--numero",{
+        rotation: 360,
+        scale: 11,
+        scrollTrigger:{
+            trigger: "contact-section__container",
+            scrub: 1 
+        }
+    })
 
-    gsap.fromTo('.titleContainer', {x: 1500}, {x: -500, duration:3 });
+    gsap.to("#number69",{
+        rotation: 720,
+        scrollTrigger:{
+            trigger: "hero-section__number",
+            scrub: 1 
+        }
+    })
 
-    // gsap.from(".title-animate", {
-    //     scrollTrigger: ".title-animate", // start the animation when ".box" enters the viewport (once)
-    //     x: -500
-    //   });
+    gsap.to(".titre-hero",{
+        backgroundPosition: "0 -100%",
+        scrollTrigger:{
+            trigger: "hero-section",
+            end: "500px",
+            scrub: 0.5,
+        }
+    })
+
 }
 
-    // ScrollTrigger: {
-    //     trigger: ".titleContainer",
-    //     scrub: true,
-
-    // }
   
 
 
@@ -113,6 +105,7 @@
 }
 
 
-nav()
-scriptAnim()
+// nav()
+animTitle()
 skills()
+animContactText()

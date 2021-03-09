@@ -4,6 +4,8 @@
   display: flex
   flex-direction: column
   align-items: flex-start
+  position: relative
+  z-index: 999
 
   .video
     position: absolute
@@ -23,13 +25,10 @@
   line-height: 1.6
   font-weight: 400
   color: #222
-  overflow-y: scroll
   position: relative
-  overflow: hidden
-  z-index: 1
-  // display: flex
-  // flex-direction: column
-  // align-items: flex-start
+  z-index: 999
+
+ 
 .welcome
   font-size: 60px
   text-align: center
@@ -70,6 +69,64 @@
   text-align: center
   font-size: 50px
 
+@media (max-width: 1000px) 
+  .uxui.desc-active
+    left: 0
+
+  .code-display
+    left: 0
+    top: 100px
+    min-height: 500px
+
+  .code-description
+    height: 500px
+
+    &::before
+
+  .centerfold-wrap
+    flex-direction: column
+
+
+@media (max-width: 500px) 
+
+  .centerfold-wrap
+    position: relative
+    display: flex
+
+  .code-display
+    max-width: 200px
+    left: -35px
+    position: absolute
+
+    &::before
+      font-size: 1rem
+      color: red
+
+  .code-description
+    font-size: 1rem
+
+  .centerfold-wrap
+    flex-direction: row
+
+  .desc-active
+    p
+      font-size: 1rem
+
+    p.code-title
+      font-size: 1.3rem
+
+  .intro-block
+    .hex-master-wrap
+      .grid-2, .grid-1, .grid-3
+        display: flex
+        margin: 0
+        padding: 0
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        width: 200px
+        
+        
 .code-display
   position: relative
   color: #f6f6f6
@@ -86,6 +143,7 @@
 
   h1
     color: #333
+
 
 .code-description
   width: 100%
@@ -142,8 +200,8 @@ p.code-title
   background-size: contain
   background-position: right center
 
-.wordrpess-desc.desc-active::after
-  background: url(https://i.imgur.com/YmCqPpk.jpg)
+.wordpress-desc.desc-active::after
+  background: url("img/skills/WordpressLogo.png")
   background-repeat: no-repeat
   background-size: contain
   background-position: right center
@@ -160,8 +218,8 @@ p.code-title
   background-size: contain
   background-position: right center
 
-.gui-desc.desc-active::after
-  background: url(https://i.imgur.com/YmCqPpk.jpg)
+.uxui-desc.desc-active::after
+  background: url("img/skills/uiuxlogo.png")
   background-repeat: no-repeat
   background-size: contain
   background-position: right center
@@ -174,10 +232,9 @@ p.code-title
 
 .hex-master-wrap
   position: relative
-
   /* width: 50%;
-  min-width: 665px
-  height: 460px
+  // min-width: 665px
+  // height: 460px
 
 .border-1, .border-2, .border-3
   position: absolute
@@ -238,6 +295,10 @@ p.code-title
   .grid-2, .grid-3
     margin-top: -50px
 
+//Skills responsive
+
+
+
 .hex-wrap
   position: relative
   width: 150px
@@ -271,6 +332,8 @@ p.code-title
       -webkit-backface-visibility: hidden
       backface-visibility: hidden
 
+
+    
 .hexagon
   width: 300px
   height: 150px
@@ -368,3 +431,35 @@ p.code-title
     margin: auto
     content: ""
     transform: rotate(60deg)
+
+//works
+
+
+#contactTitle
+  z-index: 999
+  position: relative
+
+//CONTACT 
+
+.contact-section
+  position: relative
+
+.contact-section__container
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+
+  h4
+    color: $orangeMain
+    font-size: 8vw
+    text-align: center
+    align-items: center 
+    margin: 3vh 0
+    padding: 0
+
+.contact-section__container--mail
+  background-color: $orangeMain
+
+#mail
+  color: white
+  margin-bottom: 0
