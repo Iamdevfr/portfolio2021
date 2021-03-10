@@ -52,8 +52,26 @@ function animContactText(){
         }
     })
 
+    // const query = window.matchMedia("(max-width: 500px)")
+
 }
 
+function test(){
+    if(window.innerWidth < 500){
+        console.log(window.innerWidth)
+    
+            gsap.to(".code-display", {
+                y: "1000px",
+                scrollTrigger:{
+                    trigger: "grid-1",
+                    scrub: 1 
+                }
+            })
+            
+        }else{
+            console.log("wow")
+        }
+}
   
 
 
@@ -109,3 +127,4 @@ function animContactText(){
 animTitle()
 skills()
 animContactText()
+test()

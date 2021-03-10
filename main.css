@@ -70,10 +70,10 @@ main {
 }
 
 #number {
-  color: #18191b;
   z-index: 1;
   opacity: 0.9;
   font-size: 15vw;
+  color: #046669;
 }
 
 @media (max-width: 800px) {
@@ -82,7 +82,7 @@ main {
   }
 
   #number {
-    font-size: 13vw;
+    font-size: 15vw;
   }
 }
 #number69 {
@@ -201,6 +201,7 @@ main {
   .code-description {
     height: 500px;
   }
+
   .centerfold-wrap {
     flex-direction: column;
   }
@@ -209,12 +210,13 @@ main {
   .centerfold-wrap {
     position: relative;
     display: flex;
+    position: relative;
   }
 
   .code-display {
     max-width: 200px;
     left: -35px;
-    position: absolute;
+    top: -300px;
   }
   .code-display::before {
     font-size: 1rem;
@@ -693,7 +695,7 @@ p.code-title {
   outline: none;
 }
 .button:hover {
-  color: #fff;
+  color: #18191b;
 }
 
 .text-hidden {
