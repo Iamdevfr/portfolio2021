@@ -98,6 +98,10 @@ main {
   z-index: 999;
 }
 
+#item-to-copy {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
