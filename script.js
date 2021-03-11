@@ -135,8 +135,41 @@ function copyToClipboard() {
     el.select()
     document.execCommand('copy')
     document.body.removeChild(el)
-    alert('Le numéro a bien été copié, vous pouvez m\'appeler à tout moment!')
+
+    // alert('Le numéro a bien été copié, vous pouvez m\'appeler à tout moment!')
   }
+
+function customCursor(){
+    $(document)
+	.mousemove(function(e) {
+	$('.your-cursor4')
+		.eq(0)
+		.css({
+		left: e.pageX,
+		top: e.pageY
+	});
+	setTimeout(function() {
+		$('.your-cursor4')
+			.eq(1)
+			.css({
+			left: e.pageX,
+			top: e.pageY
+		});
+	}, 400);
+	setTimeout(function() {
+		$('.your-cursor4')
+			.eq(2)
+			.css({
+			left: e.pageX,
+			top: e.pageY
+		});
+	}, 200);
+});
+$(document).on("mousemove", function(e) {
+	mouseX = e.pageX;
+	mouseY = e.pageY;
+});
+}
 
 // nav()
 animTitle()
@@ -144,3 +177,4 @@ skills()
 animContactText()
 test()
 copyToClipboard();
+customCursor();
