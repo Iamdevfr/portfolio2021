@@ -16,6 +16,76 @@ main {
   background-color: black;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #18191b;
+    color: #fff;
+  }
+  body ::selection {
+    background-color: white;
+    color: #18191b;
+  }
+  body button {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  body button::before {
+    color: #18191b;
+  }
+  body .titre-animate {
+    color: #2ddab8;
+  }
+  body .titre-hero {
+    -webkit-text-stroke: 2px #2ddab8;
+    background-image: linear-gradient(to bottom, transparent 50%, #2ddab8 50%);
+  }
+  body .contact-section__container--mail {
+    background-color: #2ddab8;
+    color: #EA5548;
+  }
+  body #number {
+    color: #EA5548;
+  }
+  body .skills-section {
+    color: white;
+  }
+  body .button-parrot .parrot {
+    color: #18191b;
+  }
+  body .your-cursor4 {
+    background-color: #EA5548;
+  }
+  body .your-cursor4:nth-child(2) {
+    background-color: #EA5548;
+  }
+  body .your-cursor4:nth-child(3) {
+    background-color: #EA5548;
+  }
+  body .slider__nav .button {
+    color: #2ddab8;
+  }
+  body .slider__nav .button:hover {
+    color: white;
+  }
+  body .button--close {
+    color: #2ddab8;
+  }
+  body .button--close:hover {
+    color: white;
+  }
+  body .container a {
+    color: #2ddab8;
+  }
+  body .container:focus {
+    color: #fff;
+  }
+  body .container:hover {
+    color: #fff;
+  }
+  body .content__item-inner h3 {
+    color: #EA5548;
+  }
+}
 .titre-hero {
   font-weight: 900;
   font-size: 12vw;
@@ -110,19 +180,19 @@ main {
   user-select: none;
   pointer-events: none;
   background-color: #079499;
-  z-index: 10;
+  z-index: 9999;
   width: 20px;
   height: 20px;
 }
 .your-cursor4:nth-child(2) {
   background-color: #079499;
-  z-index: 7;
+  z-index: 9998;
   width: 6px;
   height: 6px;
 }
 .your-cursor4:nth-child(3) {
   background-color: #079499;
-  z-index: 7;
+  z-index: 9997;
   height: 15px;
   width: 15px;
 }
@@ -145,6 +215,76 @@ main {
   background-color: black;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #18191b;
+    color: #fff;
+  }
+  body ::selection {
+    background-color: white;
+    color: #18191b;
+  }
+  body button {
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  body button::before {
+    color: #18191b;
+  }
+  body .titre-animate {
+    color: #2ddab8;
+  }
+  body .titre-hero {
+    -webkit-text-stroke: 2px #2ddab8;
+    background-image: linear-gradient(to bottom, transparent 50%, #2ddab8 50%);
+  }
+  body .contact-section__container--mail {
+    background-color: #2ddab8;
+    color: #EA5548;
+  }
+  body #number {
+    color: #EA5548;
+  }
+  body .skills-section {
+    color: white;
+  }
+  body .button-parrot .parrot {
+    color: #18191b;
+  }
+  body .your-cursor4 {
+    background-color: #EA5548;
+  }
+  body .your-cursor4:nth-child(2) {
+    background-color: #EA5548;
+  }
+  body .your-cursor4:nth-child(3) {
+    background-color: #EA5548;
+  }
+  body .slider__nav .button {
+    color: #2ddab8;
+  }
+  body .slider__nav .button:hover {
+    color: white;
+  }
+  body .button--close {
+    color: #2ddab8;
+  }
+  body .button--close:hover {
+    color: white;
+  }
+  body .container a {
+    color: #2ddab8;
+  }
+  body .container:focus {
+    color: #fff;
+  }
+  body .container:hover {
+    color: #fff;
+  }
+  body .content__item-inner h3 {
+    color: #EA5548;
+  }
+}
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -290,16 +430,16 @@ main {
   top: -70px;
   left: 0;
   font-size: 3rem;
-  color: #333;
+  color: #fff;
 }
 .code-display h1 {
-  color: #333;
+  color: #fff;
 }
 
 .code-description {
   width: 100%;
   height: 100%;
-  color: #333;
+  color: #fff;
 }
 .code-description * {
   display: none;
@@ -501,7 +641,6 @@ p.code-title {
   -ms-transform: rotate(120deg);
   -o-transform: rotate(120deg);
   transform: rotate(90deg);
-  cursor: pointer;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -561,7 +700,6 @@ p.code-title {
   width: 100%;
   z-index: 9;
   transform: rotate(-60deg);
-  cursor: pointer;
 }
 .hex-init::after {
   width: 100%;

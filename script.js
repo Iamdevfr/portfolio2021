@@ -136,7 +136,8 @@ function copyToClipboard() {
     document.execCommand('copy')
     document.body.removeChild(el)
 
-    // alert('Le numéro a bien été copié, vous pouvez m\'appeler à tout moment!')
+    document.execCommand('copy') ? 
+    alert('Le numéro a bien été copié, vous pouvez m\'appeler à tout moment!') : ""
   }
 
 function customCursor(){
@@ -171,7 +172,12 @@ $(document).on("mousemove", function(e) {
 });
 }
 
-// nav()
+//Reload when window size change
+$(window).resize(function() {
+    location.reload()
+});
+
+
 animTitle()
 skills()
 animContactText()

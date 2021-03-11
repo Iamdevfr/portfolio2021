@@ -2,7 +2,9 @@
 
 $orangeMain : #EA5548
 $blackMain: #18191b
-  
+$greenMain: #2ddab8
+
+
 // General    
 * 
   box-sizing: border-box
@@ -19,3 +21,76 @@ main
 ::selection 
   background-color: black
 
+
+//Dark mode
+
+@mixin dark-mode 
+  background: $blackMain
+  color: #fff
+
+  ::selection
+    background-color: white
+    color: $blackMain
+
+  button
+    color:#fff
+    border: 1px solid #fff
+    &::before
+      color: $blackMain 
+
+  .titre-animate
+    color: $greenMain
+
+  .titre-hero
+    -webkit-text-stroke: 2px $greenMain
+    background-image: linear-gradient(to bottom, transparent 50%, $greenMain 50%)
+
+    
+  .contact-section__container--mail 
+    background-color: $greenMain
+    color: $orangeMain
+
+  #number
+    color: $orangeMain
+
+  .skills-section
+    color: white
+
+  .button-parrot .parrot
+    color: $blackMain
+
+  .your-cursor4
+    background-color: $orangeMain
+    &:nth-child(2)
+      background-color: $orangeMain
+    &:nth-child(3)
+      background-color: $orangeMain
+
+  .slider__nav
+    .button
+      color: $greenMain
+      &:hover
+        color: white
+
+  .button--close
+    color: $greenMain
+    &:hover
+      color: white
+
+  .container
+    a
+      color: $greenMain
+    &:focus
+      color: #fff
+    &:hover
+      color: #fff
+  
+  .content__item-inner
+    h3
+      color: $orangeMain
+
+      
+@media (prefers-color-scheme: dark) 
+  body 
+    @include dark-mode
+  
